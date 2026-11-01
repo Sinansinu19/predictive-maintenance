@@ -57,11 +57,11 @@ if __name__ == "__main__":
     train_anomaly_model()
 
     # Evaluation against ground truth failure labels
-    train_df = pd.read_csv(config.TRAIN_PATH)
-    flags, scores = detect_anomalies(train_df)
+    test_df = pd.read_csv(config.TEST_PATH)
+    flags, scores = detect_anomalies(test_df)
 
-    actual_failures = train_df[config.TARGET_FAILURE] == 1
-    normal_rows = train_df[config.TARGET_FAILURE] == 0
+    actual_failures = test_df[config.TARGET_FAILURE] == 1
+    normal_rows = test_df[config.TARGET_FAILURE] == 0
 
     failure_capture_rate = (
         (actual_failures & flags).sum() / actual_failures.sum()
@@ -74,8 +74,8 @@ if __name__ == "__main__":
         else 0.0
     )
 
-    print("\n--- Anomaly Model Diagnostics ---")
-    print(f"Isolation Forest flagged {failure_capture_rate:.2%} of actual machine failures.")
-    print(f"Isolation Forest flagged {normal_flag_rate:.2%} of normal operating rows.")
+    print("\n--- Anomaly Model Diagnostics (Test Set) ---")
+    print(f"Test set: Isolation Forest flagged {failure_capture_rate:.2%} of actual machine failures.")
+    print(f"Test set: Isolation Forest flagged {normal_flag_rate:.2%} of normal operating rows.")
     print(f"Sample flags shape: {flags.shape}, dtype: {flags.dtype}")
     print(f"Sample scores shape: {scores.shape}, dtype: {scores.dtype}")

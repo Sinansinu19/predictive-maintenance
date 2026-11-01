@@ -110,16 +110,6 @@ ENV_DISCLAIMER = (
     "not evidence that weather causes failures."
 )
 
-# Optional vehicle dyno test preset (Section 9.3)
-VEHICLE_PRESET_RAW = {
-    "type": "M",
-    "air_temp_k": 305.15,
-    "process_temp_k": 368.15,
-    "rot_speed_rpm": 2500.0,
-    "torque_nm": 180.0,
-    "tool_wear_min": 120.0,
-}
-
 API_HOST = "127.0.0.1"
 API_PORT = 8000
 
