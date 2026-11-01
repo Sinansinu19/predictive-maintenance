@@ -29,6 +29,7 @@ def optimal_threshold(
     thresholds = np.linspace(0.0, 1.0, 101)
     best_threshold = 0.5
     min_cost = float("inf")
+    tied_thresholds: list[float] = []
 
     for thresh in thresholds:
         preds = (proba_arr >= thresh).astype(int)
@@ -41,9 +42,13 @@ def optimal_threshold(
 
         if total_cost < min_cost:
             min_cost = total_cost
-            best_threshold = float(thresh)
+            tied_thresholds = [float(thresh)]
+        elif total_cost == min_cost:
+            tied_thresholds.append(float(thresh))
 
-    return float(best_threshold)
+    best_threshold = float(np.median(tied_thresholds))
+
+    return best_threshold
 
 
 def save_threshold(value: float) -> None:

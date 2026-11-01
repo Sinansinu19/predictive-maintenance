@@ -88,13 +88,13 @@ def predict(data: PredictRequest):
         "seq": SEQ_COUNTER,
         "machine_id": data.machine_id,
         "timestamp": now,
-        "probability": round(prob, 4),
+        "probability": prob,
         "threshold": active_threshold,
         "trigger_alert": trigger,
         "anomaly_flag": a_flag,
-        "anomaly_score": round(a_score, 4),
-        "temp_diff_k": round(temp_diff_k, 4),
-        "power_w": round(power_w, 4),
+        "anomaly_score": a_score,
+        "temp_diff_k": temp_diff_k,
+        "power_w": power_w,
         "inputs": data.inputs.model_dump(),
         "weather": data.weather
     }
