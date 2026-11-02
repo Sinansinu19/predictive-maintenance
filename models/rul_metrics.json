@@ -1,0 +1,9 @@
+{
+    "rul_cap": 125,
+    "rolling_window": 5,
+    "dataset": "NASA C-MAPSS FD001",
+    "validation_rmse": 15.320885283723035,
+    "validation_mae": 10.092878532424313,
+    "test_rmse": 19.789033226351183,
+    "test_mae": 14.521847531795501
+}
