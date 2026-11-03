@@ -13,6 +13,14 @@ from src.anomaly import detect_anomalies
 
 # --- Initialize FastAPI ---
 app = FastAPI(title="Predictive Maintenance Live API - Contract v4.1")
+@app.get("/")
+def root():
+    return {
+        "message": "Predictive Maintenance API is running",
+        "status": "online",
+        "docs": "/docs",
+        "health": "/health"
+    }
 
 # --- In-Memory Store for Live Dashboard ---
 READINGS_STORE = []

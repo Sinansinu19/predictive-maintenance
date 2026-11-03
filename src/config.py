@@ -111,7 +111,7 @@ ENV_DISCLAIMER = (
 )
 
 API_HOST = "127.0.0.1"
-API_PORT = 8000
+API_PORT = 8001
 
 if __name__ == "__main__":
     print(f"Base Directory: {BASE_DIR}")
