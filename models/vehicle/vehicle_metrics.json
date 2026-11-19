@@ -1,0 +1,15 @@
+{
+  "roc_auc": 0.9795,
+  "pr_auc": 0.6651,
+  "best_threshold": 0.9,
+  "precision": 0.4426,
+  "recall": 0.803,
+  "f1_score": 0.5707,
+  "feature_columns": [
+    "sensor_rpm",
+    "sensor_speed",
+    "sensor_temp",
+    "vehicle_type_heavy_truck",
+    "vehicle_type_passenger_car"
+  ]
+}

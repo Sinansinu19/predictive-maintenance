@@ -1,0 +1,23 @@
+{
+  "overall_feature_importance": {
+    "sensor_rpm": 3.8374,
+    "sensor_speed": 1.3673,
+    "vehicle_type_heavy_truck": 0.9382,
+    "sensor_temp": 0.599,
+    "vehicle_type_passenger_car": 0.0
+  },
+  "heavy_truck_importance": {
+    "sensor_rpm": 3.0472,
+    "vehicle_type_heavy_truck": 0.7713,
+    "sensor_temp": 0.6535,
+    "sensor_speed": 0.3921,
+    "vehicle_type_passenger_car": 0.0
+  },
+  "passenger_car_importance": {
+    "sensor_rpm": 4.6277,
+    "sensor_speed": 2.3425,
+    "vehicle_type_heavy_truck": 1.1052,
+    "sensor_temp": 0.5445,
+    "vehicle_type_passenger_car": 0.0
+  }
+}
