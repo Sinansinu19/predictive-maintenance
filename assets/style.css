@@ -1,0 +1,277 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+:root {
+    --bg: #06111f;
+    --sidebar: #071827;
+    --panel: #0c2035;
+    --panel2: #102942;
+    --border: #174b70;
+    --cyan: #08c8e8;
+    --blue: #087cff;
+    --text: #eaf5ff;
+    --muted: #91a9c0;
+    --green: #00d68f;
+    --red: #ff4568;
+}
+
+.stApp {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Inter', sans-serif;
+}
+
+header[data-testid="stHeader"] {
+    background: transparent;
+}
+
+.block-container {
+    max-width: 100%;
+    padding: 1.5rem 2rem 3rem;
+}
+
+h1, h2, h3, h4, p, label {
+    font-family: 'Inter', sans-serif !important;
+}
+
+h1 {
+    font-size: 30px !important;
+    font-weight: 800 !important;
+    color: #ffffff !important;
+}
+
+h2, h3 {
+    color: var(--text) !important;
+    font-weight: 700 !important;
+}
+
+p, label {
+    color: #c6d7e8;
+}
+
+/* SIDEBAR */
+
+section[data-testid="stSidebar"] {
+    background: linear-gradient(180deg, #071a2b, #061321);
+    border-right: 1px solid #123957;
+}
+
+section[data-testid="stSidebar"] .block-container {
+    padding: 1.5rem 1rem;
+}
+
+/* SIDEBAR NAVIGATION */
+
+section[data-testid="stSidebar"] .stButton button {
+    background: transparent;
+    color: #c9dceb !important;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    text-align: left;
+    width: 100%;
+    padding: 12px;
+}
+
+section[data-testid="stSidebar"] .stButton button:hover {
+    background: #103b59;
+    border-color: var(--cyan);
+    color: white !important;
+}
+
+/* HEADER PANEL */
+
+.dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    padding: 10px 0 22px;
+    border-bottom: 1px solid #163b59;
+    margin-bottom: 22px;
+}
+
+.brand-title {
+    font-size: 28px;
+    font-weight: 800;
+    color: white;
+}
+
+.brand-subtitle {
+    font-size: 12px;
+    color: var(--muted);
+    margin-top: 5px;
+}
+
+.api-online {
+    display: inline-block;
+    padding: 10px 18px;
+    border-radius: 30px;
+    color: #00efae;
+    background: #063b32;
+    border: 1px solid #00a97b;
+    font-weight: 700;
+}
+
+.api-offline {
+    display: inline-block;
+    padding: 10px 18px;
+    border-radius: 30px;
+    color: #ff738a;
+    background: #401827;
+    border: 1px solid #b52c50;
+    font-weight: 700;
+}
+
+/* KPI CARDS */
+
+div[data-testid="stMetric"] {
+    background: linear-gradient(145deg, #102b45, #091b2e);
+    border: 1px solid #18547c;
+    border-radius: 13px;
+    padding: 17px;
+    min-height: 105px;
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.18);
+    transition: 0.25s;
+}
+
+div[data-testid="stMetric"]:hover {
+    border-color: var(--cyan);
+    box-shadow: 0 0 16px rgba(8, 200, 232, 0.15);
+    transform: translateY(-2px);
+}
+
+div[data-testid="stMetricLabel"] {
+    color: #a9c3da !important;
+    font-size: 12px !important;
+}
+
+div[data-testid="stMetricValue"] {
+    color: white !important;
+    font-size: 25px !important;
+    font-weight: 800 !important;
+}
+
+/* SECTION PANELS */
+
+div[data-testid="stVerticalBlockBorderWrapper"] {
+    background: linear-gradient(145deg, #0c2136, #08192b);
+    border: 1px solid #174c70;
+    border-radius: 13px;
+    padding: 12px;
+}
+
+/* BUTTONS */
+
+.stButton > button,
+.stFormSubmitButton > button {
+    background: linear-gradient(100deg, #08b9d9, #0865ed);
+    color: white !important;
+    border: 1px solid #159ee6;
+    border-radius: 9px;
+    font-weight: 700;
+    min-height: 42px;
+    transition: 0.2s;
+}
+
+.stButton > button:hover,
+.stFormSubmitButton > button:hover {
+    border-color: #5ceaff;
+    box-shadow: 0 0 15px rgba(8, 200, 232, 0.25);
+    transform: translateY(-1px);
+}
+
+/* INPUTS */
+
+.stTextInput input,
+.stNumberInput input,
+.stTextArea textarea {
+    background: #10253b !important;
+    color: white !important;
+    border: 1px solid #38688c !important;
+    border-radius: 8px !important;
+}
+
+div[data-baseweb="select"] > div {
+    background: #10253b !important;
+    color: white !important;
+    border-color: #38688c !important;
+}
+
+/* TABLES */
+
+div[data-testid="stDataFrame"] {
+    border: 1px solid #174c70;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* PLOTLY CHARTS */
+
+div[data-testid="stPlotlyChart"] {
+    background: #091b2d;
+    border: 1px solid #174b70;
+    border-radius: 12px;
+    padding: 5px;
+}
+
+/* TABS */
+
+.stTabs [data-baseweb="tab-list"] {
+    gap: 12px;
+    border-bottom: 1px solid #174b70;
+}
+
+.stTabs [data-baseweb="tab"] {
+    color: #9bb6ce;
+    font-weight: 600;
+}
+
+.stTabs [aria-selected="true"] {
+    color: var(--cyan) !important;
+    border-bottom-color: var(--cyan) !important;
+}
+
+/* EXPANDERS */
+
+div[data-testid="stExpander"] {
+    background: #0c2035;
+    border: 1px solid #174b70;
+    border-radius: 10px;
+}
+
+/* STATUS MESSAGES */
+
+div[data-testid="stAlert"] {
+    border-radius: 10px;
+    border: 1px solid #285477;
+}
+
+/* DIVIDERS */
+
+hr {
+    border-color: #173c58 !important;
+}
+
+/* CAPTIONS */
+
+.stCaption {
+    color: #91a9c0 !important;
+}
+
+/* HIDE STREAMLIT FOOTER */
+
+footer {
+    visibility: hidden;
+}
+
+/* RESPONSIVE */
+
+@media(max-width: 900px) {
+    .block-container {
+        padding: 1rem;
+    }
+
+    .brand-title {
+        font-size: 21px;
+    }
+}
